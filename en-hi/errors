@@ -1,0 +1,49 @@
+/Users/rikkihung/PycharmProjects/paradise/venv/lib/python3.9/site-packages/torch/amp/autocast_mode.py:198: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn('User provided device_type of \'cuda\', but CUDA is not available. Disabling')
+Traceback (most recent call last):
+  File "/Users/rikkihung/PycharmProjects/paradise/venv/bin/fairseq-train", line 33, in <module>
+    sys.exit(load_entry_point('fairseq', 'console_scripts', 'fairseq-train')())
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq_cli/train.py", line 559, in cli_main
+    
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/distributed/utils.py", line 369, in call_main
+    main(cfg, **kwargs)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq_cli/train.py", line 190, in main
+    valid_losses, should_stop = train(cfg, trainer, task, epoch_itr)
+  File "/Users/rikkihung/opt/anaconda3/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq_cli/train.py", line 330, in train
+    valid_losses, should_stop = validate_and_save(
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq_cli/train.py", line 421, in validate_and_save
+    valid_losses = validate(cfg, trainer, task, epoch_itr, valid_subsets)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq_cli/train.py", line 505, in validate
+    trainer.valid_step(sample)
+  File "/Users/rikkihung/opt/anaconda3/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/trainer.py", line 1121, in valid_step
+    _loss, sample_size, logging_output = self.task.valid_step(
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/tasks/translation_multi_simple_epoch.py", line 223, in valid_step
+    loss, sample_size, logging_output = super().valid_step(sample, model, criterion)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/tasks/fairseq_task.py", line 527, in valid_step
+    loss, sample_size, logging_output = criterion(model, sample)
+  File "/Users/rikkihung/PycharmProjects/paradise/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/criterions/label_smoothed_cross_entropy.py", line 79, in forward
+    net_output = model(**sample["net_input"])
+  File "/Users/rikkihung/PycharmProjects/paradise/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/models/bart/model.py", line 94, in forward
+    x, extra = self.decoder(
+  File "/Users/rikkihung/PycharmProjects/paradise/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/models/transformer/transformer_decoder.py", line 227, in forward
+    x = self.output_layer(x)
+  File "/Users/rikkihung/PycharmProjects/paradise/fairseq/fairseq/models/transformer/transformer_decoder.py", line 376, in output_layer
+    return self.output_projection(features)
+  File "/Users/rikkihung/PycharmProjects/paradise/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/rikkihung/PycharmProjects/paradise/venv/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+libc++abi: terminating with uncaught exception of type std::__1::system_error: Broken pipe
+/Users/rikkihung/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 2 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
