@@ -7,5 +7,5 @@ Implementation of the "PARADISE: Exploiting Parallel Data for Multilingual Seque
 2. download the en-hi files
   - files created after spm.encode are in ./en-hi/encode
   - files created after fairseq preprocess are in ./en-hi/preprocess
-3. run the command with the specified arguments in test_en-hi.sh
+3. run the command with the specified arguments in test_pycharm.txt
   - checkpoints will be saved to ./en-hi/checkpoints
